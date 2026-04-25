@@ -1,0 +1,89 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>SSAS_DWH_Project</Database>
+    <Server>localhost</Server>
+    <ConnectionString>Data Source=localhost;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>N2e4GG6y1Laotd8VfPHqBRfHRQc=23/04/2026 11:46:35 م23/04/2026 11:46:35 م</TimeStamp>
+        <ID>
+          <String>DS_Bookstore_DWH</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>50qfMgq3VhrN9dmN4vhR93tkPgE=23/04/2026 11:48:25 م23/04/2026 11:48:25 م</TimeStamp>
+        <ID>
+          <String>Bookstore _DWH_View</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Yke35FE3hPHq1M1HDoKgrVsU0gQ=24/04/2026 01:03:41 ص23/04/2026 11:50:27 م</TimeStamp>
+        <ID>
+          <String>Dim Address</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>H+CxlHIJVwLw3OD6E7jdRd84bJM=24/04/2026 01:03:41 ص23/04/2026 11:50:27 م</TimeStamp>
+        <ID>
+          <String>Dim Status History</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>ICXoWEwsfiii0ry34XRVLiHMzQQ=24/04/2026 01:17:21 ص23/04/2026 11:50:27 م</TimeStamp>
+        <ID>
+          <String>Dim Customer</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>vx7sQFRH49ko25gHgP+Qa17RrCU=23/04/2026 11:50:27 م23/04/2026 11:50:27 م</TimeStamp>
+        <ID>
+          <String>Dim Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Vsd0cM+qP67AsaGIcKhtDoDUQt8=24/04/2026 01:17:21 ص23/04/2026 11:50:27 م</TimeStamp>
+        <ID>
+          <String>Dim Book</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>DwFeCkyWzVmtQoGfQnLnxj3luQU=24/04/2026 01:17:21 ص23/04/2026 11:50:27 مEla5zcloMwx402Ynn/W/WKywVFc=23/04/2026 11:50:27 م23/04/2026 11:50:27 م</TimeStamp>
+        <ID>
+          <String>Bookstore _DWH_View</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>jc0z45nLl8g4x5SeOLdeTmNPZLM=23/04/2026 11:40:55 م23/04/2026 11:40:55 م</TimeStamp>
+      <ID>
+        <String>SSAS_DWH_Project</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2026-04-23T23:48:17.67Z</LastDeployed>
+</DeploymentSnapshot>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/23/2026 12:21:59 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-SN4FFSO"
+  DTS:CreatorName="DESKTOP-SN4FFSO\AdminOS"
+  DTS:DTSID="{473DC779-8DE1-4A72-A400-BE3CFEA90D3F}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
+  DTS:LocaleID="3073"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{AE260DF2-27FF-4261-A0A3-E2F539C65095}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{D09CB8C2-3C6E-47B1-BFB0-B43249C6819F}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{781189F8-FC20-455A-A063-F31932D3DCDF}"
+          SQLTask:SqlStatementSource="IF NOT EXISTS (SELECT 1 FROM dwh.dim_date)&#xA;BEGIN&#xA;    WITH dates AS (&#xA;        SELECT CAST('2015-01-01' AS DATE) AS d&#xA;        UNION ALL&#xA;        SELECT DATEADD(DAY,1,d) FROM dates WHERE d &lt; '2035-12-31'&#xA;    )&#xA;    INSERT INTO dwh.dim_date&#xA;    SELECT&#xA;        CONVERT(INT, FORMAT(d,'yyyyMMdd')),&#xA;        d,&#xA;        DATEPART(WEEKDAY,d),&#xA;        DATENAME(WEEKDAY,d),&#xA;        MONTH(d),&#xA;        DATENAME(MONTH,d),&#xA;        DATEPART(QUARTER,d),&#xA;        YEAR(d),&#xA;        CASE WHEN DATEPART(WEEKDAY,d) IN (1,7) THEN 1 ELSE 0 END&#xA;    FROM dates&#xA;    OPTION (MAXRECURSION 10000)&#xA;END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Execute SQL Task"
+          TopLeft="334.285714997321,97.8823528553788" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
